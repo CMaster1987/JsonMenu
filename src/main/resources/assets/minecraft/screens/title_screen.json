@@ -1,0 +1,37 @@
+{
+    "buttons":
+    [
+        {
+            "name":{"Translate":"menu.singleplayer"},
+            "dimension": [200, 20],
+            "pos": [-100, 0],
+            "ClickEvent":
+            {
+                "conditions":
+                [
+                    {
+                        "condition": "noWorlds",
+                        "set_screen": "minecraft:new_world_screen"
+                    }
+                ],
+                "set_screen": "minecraft:world_selection_screen"
+            }
+        },
+        {
+            "condition": "isModLoaded",
+            "modid": "modmenu",
+            "name":
+            [
+                {"Translate": "modmenu.title", "color": 16777215},
+                {"Text": " "},
+                {"Translate": "modmenu.loaded", "color": 16777215}
+            ],
+            "dimension": [200, 20],
+            "pos": [-100, 72],
+            "ClickEvent":
+            {
+                "set_screen": "modmenu:mods_list_screen"
+            }
+        }
+    ]
+}
